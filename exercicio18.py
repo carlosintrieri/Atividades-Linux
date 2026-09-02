@@ -7,4 +7,8 @@ for linha in processo.stdout:
         print(linha.strip())
 
 
-        # neste caso, entrar com usuário falso em outro terminal para brecar o login do código
+        # neste caso, entrar com usuário falso em outro terminal para brecar o login do códigoservico = "kernel"
+
+for linha in open("/var/log/syslog"):
+    if servico in linha and ("error" in linha.lower() or "warning" in linha.lower()):
+        print(linha.strip())
